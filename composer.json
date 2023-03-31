@@ -5,7 +5,8 @@
             "Hexlet\\Code\\": "src/"
         },
         "files": [
-            "src/Cli.php"
+            "src/Cli.php",
+            "src/game.php"
         ]
     },
     "authors": [
@@ -16,8 +17,9 @@
     ],
     "description": "hexlet brain games project",
     "bin": [
-  "bin/brain-games"
-  ],
+    "bin/brain-games",
+    "bin/brain-even"
+    ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.17"
     },
