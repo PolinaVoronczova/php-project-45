@@ -6,7 +6,8 @@
         },
         "files": [
             "src/Cli.php",
-            "src/game.php"
+            "src/game.php",
+            "src/Engine.php"
         ]
     },
     "authors": [

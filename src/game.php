@@ -1,55 +1,41 @@
-#!/usr/bin/env php
 <?php
-
-namespace BrainEven\game;
+namespace BrainGames\game;
 
 use function cli\line;
 use function cli\prompt;
 
-line('Welcome to the Brain Games!');
-$name = prompt('May I have your name?');
-line("Hello, %s!", $name);
-line('Answer "yes" if the number is even, otherwise answer "no".');
+use function BrainGames\Engine\startGame;
+use function BrainGames\Engine\question;
+use function BrainGames\Engine\checkAnswer;
+use function BrainGames\Engine\checkGameResult;
+
+$userName = startGame();
 $resultGame = evenGame();
-line($resultGame.$name);
-
-
+line($resultGame.$userName);
 function evenGame()
 {
+    line('Answer "yes" if the number is even, otherwise answer "no".');
     $score = 0;
     while ($score != 3) {
-        $questionInfo = question();
+        $randNum = rand(1, 100);
+        $questionInfo = question($randNum);
         $userAnswer = $questionInfo[0];
         $randNum = $questionInfo[1];
-        $resultCheackAnswer = checkAnswer($userAnswer, $randNum);
+        $isEven = evenCheack($randNum);
+        $resultCheackAnswer = checkAnswer($userAnswer, $isEven);
         if ($resultCheackAnswer === 'Correct!') {
             $score++;
-            line(checkAnswer($userAnswer, $randNum));
+            line($resultCheackAnswer);
         } else {
-            line(checkAnswer($userAnswer, $randNum));
+            line($resultCheackAnswer);
             $score = 0;
             break;
         }
     }
-    if ($score === 3) {
-        return('Congratulations, ');
-    } else {
-        return("Let's try again, ");
-    }
+    return checkGameResult($score);
 }
-function question()
+function evenCheack($numForCheack)
 {
-    $randNum = rand(1, 100);
-    line('Question:'.$randNum);
-    $answer = prompt('Your answer');
-    return [$answer,$randNum];
-}
-function checkAnswer($userAnswer, $numForCheack)
-{
-    $evenCheack = $numForCheack % 2 === 0 ? 'yes' : 'no';
-    if ($userAnswer === $evenCheack ) {
-        return 'Correct!';
-    } else {
-        return($userAnswer." is wrong answer ;(. Correct answer was ".$evenCheack.".");
-    }
+    $result = $numForCheack % 2 === 0 ? 'yes' : 'no';
+    return $result;
 }
