@@ -3,33 +3,47 @@ namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
-function startGame()
+use function BrainGames\Games\game\evenQuestionAndCorrectAnswer;
+use function BrainGames\Games\calc\calculatorQuestionAndCorrectAnswer;
+function startGame($gameName)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line('Answer "yes" if the number is even, otherwise answer "no".');
-    return $name;
-}
-function question($questionValue)
-{
-    line('Question:'.$questionValue);
-    $answer = prompt('Your answer');
-    return [$answer,$questionValue];
-}
-function checkAnswer($userAnswer,$correctAnswer)
-{
-    if ($userAnswer === $correctAnswer ) {
-        return 'Correct!';
-    } else {
-        return($userAnswer." is wrong answer ;(. Correct answer was ".$correctAnswer.".");
+    switch ($gameName) {
+    case "even":
+            line('Answer "yes" if the number is even, otherwise answer "no".');
+        break;
+    case "calculator":
+            line('What is the result of the expression?');
+        break;
     }
-}
-function checkGameResult($score)
-{
+    $score = 0;
+    while ($score != 3) {
+        $correctAnswer = "";
+        $answers = [];
+        switch ($gameName) {
+        case "even":
+            $correctAnswer = evenQuestionAndCorrectAnswer();
+            break;
+        case "calculator":
+            $correctAnswer = calculatorQuestionAndCorrectAnswer();
+            break;
+        }
+        $userAnswer = prompt('Your answer');
+        if ($userAnswer === strval($correctAnswer) ) {
+            $score++;
+            line('Correct!');
+        } else {
+            line($userAnswer." is wrong answer ;(. Correct answer was ".$correctAnswer.".");
+            $score = 0;
+            break;
+        }
+    }
     if ($score === 3) {
-        return('Congratulations, ');
+        line('Congratulations, '. $name);
     } else {
-        return("Let's try again, ");
+        line("Let's try again, ".$name);
     }
+    return;
 }

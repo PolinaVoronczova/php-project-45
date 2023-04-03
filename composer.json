@@ -1,12 +1,10 @@
 {
     "name": "hexlet/code",
     "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        },
         "files": [
             "src/Cli.php",
-            "src/game.php",
+            "src/Games/game.php",
+            "src/Games/calc.php",
             "src/Engine.php"
         ]
     },
@@ -19,7 +17,8 @@
     "description": "hexlet brain games project",
     "bin": [
     "bin/brain-games",
-    "bin/brain-even"
+    "bin/brain-even",
+    "bin/brain-calc"
     ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.17"
