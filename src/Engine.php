@@ -1,4 +1,5 @@
 <?php
+
 namespace BrainGames\Engine;
 
 use function cli\line;
@@ -8,6 +9,7 @@ use function BrainGames\Games\calc\calculatorAskAndGetCorrectAnswer;
 use function BrainGames\Games\gcd\gcdAskAndGetCorrectAnswer;
 use function BrainGames\Games\progression\progressionAskAndGetCorrectAnswer;
 use function BrainGames\Games\prime\primeAskAndGetCorrectAnswer;
+
 function startGame($gameName)
 {
     line('Welcome to the Brain Games!');
