@@ -62,9 +62,9 @@ function startGame($gameName)
         }
     }
     if ($score === 3) {
-        line('Congratulations, '.$name);
+        line('Congratulations, '.$name.'!');
     } else {
-        line("Let's try again, ".$name);
+        line("Let's try again, ".$name.'!');
     }
     return;
 }
