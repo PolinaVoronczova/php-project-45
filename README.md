@@ -8,3 +8,5 @@
 (https://asciinema.org/a/en8Q237RnFiM0QcZIcj0jV9Td)
 #### demonstration of a progression console game
 (https://asciinema.org/a/dpwaf1hQgDbsWN7qiK5EsDgWo)
+#### demonstration of a prime console game
+(https://asciinema.org/a/nJIH28McThhA27ADeieWgVqPm)

@@ -7,6 +7,7 @@ use function BrainGames\Games\game\evenQuestionAndCorrectAnswer;
 use function BrainGames\Games\calc\calculatorQuestionAndCorrectAnswer;
 use function BrainGames\Games\gcd\gcdQuestionAndCorrectAnswer;
 use function BrainGames\Games\progression\progressionQuestionAndCorrectAnswer;
+use function BrainGames\Games\prime\primeQuestionAndCorrectAnswer;
 function startGame($gameName)
 {
     line('Welcome to the Brain Games!');
@@ -24,6 +25,9 @@ function startGame($gameName)
         break;
     case "progression":
             line('What number is missing in the progression?');
+        break;
+        case "prime":
+            line('Answer "yes" if given number is prime. Otherwise answer "no".');
         break;
     }
     $score = 0;
@@ -43,6 +47,9 @@ function startGame($gameName)
         case "progression":
             $correctAnswer = progressionQuestionAndCorrectAnswer();
             break;
+        case "prime":
+            $correctAnswer = primeQuestionAndCorrectAnswer();
+            break;
         }
         $userAnswer = prompt('Your answer');
         if ($userAnswer === strval($correctAnswer) ) {
@@ -55,7 +62,7 @@ function startGame($gameName)
         }
     }
     if ($score === 3) {
-        line('Congratulations, '. $name);
+        line('Congratulations, '.$name);
     } else {
         line("Let's try again, ".$name);
     }
