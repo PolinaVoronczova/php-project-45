@@ -6,6 +6,7 @@ use function cli\prompt;
 use function BrainGames\Games\game\evenQuestionAndCorrectAnswer;
 use function BrainGames\Games\calc\calculatorQuestionAndCorrectAnswer;
 use function BrainGames\Games\gcd\gcdQuestionAndCorrectAnswer;
+use function BrainGames\Games\progression\progressionQuestionAndCorrectAnswer;
 function startGame($gameName)
 {
     line('Welcome to the Brain Games!');
@@ -18,8 +19,11 @@ function startGame($gameName)
     case "calculator":
             line('What is the result of the expression?');
         break;
-        case "gcd":
+    case "gcd":
             line('Find the greatest common divisor of given numbers.');
+        break;
+    case "progression":
+            line('What number is missing in the progression?');
         break;
     }
     $score = 0;
@@ -33,8 +37,11 @@ function startGame($gameName)
         case "calculator":
             $correctAnswer = calculatorQuestionAndCorrectAnswer();
             break;
-            case "gcd":
-                $correctAnswer = gcdQuestionAndCorrectAnswer();
+        case "gcd":
+            $correctAnswer = gcdQuestionAndCorrectAnswer();
+            break;
+        case "progression":
+            $correctAnswer = progressionQuestionAndCorrectAnswer();
             break;
         }
         $userAnswer = prompt('Your answer');
