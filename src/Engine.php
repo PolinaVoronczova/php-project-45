@@ -5,6 +5,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Games\game\evenQuestionAndCorrectAnswer;
 use function BrainGames\Games\calc\calculatorQuestionAndCorrectAnswer;
+use function BrainGames\Games\gcd\gcdQuestionAndCorrectAnswer;
 function startGame($gameName)
 {
     line('Welcome to the Brain Games!');
@@ -17,6 +18,9 @@ function startGame($gameName)
     case "calculator":
             line('What is the result of the expression?');
         break;
+        case "gcd":
+            line('Find the greatest common divisor of given numbers.');
+        break;
     }
     $score = 0;
     while ($score != 3) {
@@ -28,6 +32,9 @@ function startGame($gameName)
             break;
         case "calculator":
             $correctAnswer = calculatorQuestionAndCorrectAnswer();
+            break;
+            case "gcd":
+                $correctAnswer = gcdQuestionAndCorrectAnswer();
             break;
         }
         $userAnswer = prompt('Your answer');
