@@ -1,8 +1,7 @@
 <?php
-namespace BrainGames\Games\game;
+namespace BrainGames\Games\even;
 use function cli\line;
-use function cli\prompt;
-function evenQuestionAndCorrectAnswer()
+function evenAskAndGetCorrectAnswer()
 {
     $randNum = rand(1, 100);
     $correctAnswer =  $randNum % 2 === 0 ? 'yes' : 'no';

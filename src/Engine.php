@@ -3,11 +3,11 @@ namespace BrainGames\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Games\game\evenQuestionAndCorrectAnswer;
-use function BrainGames\Games\calc\calculatorQuestionAndCorrectAnswer;
-use function BrainGames\Games\gcd\gcdQuestionAndCorrectAnswer;
-use function BrainGames\Games\progression\progressionQuestionAndCorrectAnswer;
-use function BrainGames\Games\prime\primeQuestionAndCorrectAnswer;
+use function BrainGames\Games\even\evenAskAndGetCorrectAnswer;
+use function BrainGames\Games\calc\calculatorAskAndGetCorrectAnswer;
+use function BrainGames\Games\gcd\gcdAskAndGetCorrectAnswer;
+use function BrainGames\Games\progression\progressionAskAndGetCorrectAnswer;
+use function BrainGames\Games\prime\primeAskAndGetCorrectAnswer;
 function startGame($gameName)
 {
     line('Welcome to the Brain Games!');
@@ -36,19 +36,19 @@ function startGame($gameName)
         $answers = [];
         switch ($gameName) {
         case "even":
-            $correctAnswer = evenQuestionAndCorrectAnswer();
+            $correctAnswer = evenAskAndGetCorrectAnswer();
             break;
         case "calculator":
-            $correctAnswer = calculatorQuestionAndCorrectAnswer();
+            $correctAnswer = calculatorAskAndGetCorrectAnswer();
             break;
         case "gcd":
-            $correctAnswer = gcdQuestionAndCorrectAnswer();
+            $correctAnswer = gcdAskAndGetCorrectAnswer();
             break;
         case "progression":
-            $correctAnswer = progressionQuestionAndCorrectAnswer();
+            $correctAnswer = progressionAskAndGetCorrectAnswer();
             break;
         case "prime":
-            $correctAnswer = primeQuestionAndCorrectAnswer();
+            $correctAnswer = primeAskAndGetCorrectAnswer();
             break;
         }
         $userAnswer = prompt('Your answer');

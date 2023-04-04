@@ -1,8 +1,7 @@
 <?php
 namespace BrainGames\Games\gcd;
 use function cli\line;
-use function cli\prompt;
-function gcdQuestionAndCorrectAnswer()
+function gcdAskAndGetCorrectAnswer()
 {
     $randNum1 = rand(1, 100);
     $randNum2 = rand(1, 100);

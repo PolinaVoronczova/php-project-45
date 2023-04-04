@@ -1,8 +1,7 @@
 <?php
 namespace BrainGames\Games\prime;
 use function cli\line;
-use function cli\prompt;
-function primeQuestionAndCorrectAnswer()
+function primeAskAndGetCorrectAnswer()
 {
     $correctAnswer = 'yes';
     $randomNum = rand(1, 100);

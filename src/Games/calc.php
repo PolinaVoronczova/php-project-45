@@ -1,8 +1,7 @@
 <?php
 namespace BrainGames\Games\calc;
 use function cli\line;
-use function cli\prompt;
-function calculatorQuestionAndCorrectAnswer()
+function calculatorAskAndGetCorrectAnswer()
 {
     $randNum1 = rand(1, 100);
     $randNum2 = rand(1, 100);
