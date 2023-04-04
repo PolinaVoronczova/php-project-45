@@ -14,13 +14,14 @@ Mind Games is a set of five console games built on the principle of popular mobi
 ## Installation
 
     make install
-#### demonstration of a even console game
+## Demonstration
+#### Demonstration of a even console game
 (https://asciinema.org/a/BR2RGC1NaDFOF75FdZUoEVtnX)
-#### demonstration of a calculator console game
+#### Demonstration of a calculator console game
 (https://asciinema.org/a/jneZsXbGTVppB2uXqUXnQ4KpX)
-#### demonstration of a gcd console game
+#### Demonstration of a gcd console game
 (https://asciinema.org/a/en8Q237RnFiM0QcZIcj0jV9Td)
-#### demonstration of a progression console game
+#### Demonstration of a progression console game
 (https://asciinema.org/a/dpwaf1hQgDbsWN7qiK5EsDgWo)
-#### demonstration of a prime console game
+#### Demonstration of a prime console game
 (https://asciinema.org/a/nJIH28McThhA27ADeieWgVqPm)
