@@ -8,6 +8,12 @@ Mind Games is a set of five console games built on the principle of popular mobi
 * Definition of an even number.
 * Determination of the greatest common divisor.
 * Definition of a prime number.
+## Minimum requirements
+* PHP 7
+* Compouser 2.2.4
+## Installation
+
+    make install
 #### demonstration of a even console game
 (https://asciinema.org/a/BR2RGC1NaDFOF75FdZUoEVtnX)
 #### demonstration of a calculator console game
