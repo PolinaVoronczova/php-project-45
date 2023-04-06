@@ -1,6 +1,7 @@
 <?php
 
 namespace BrainGames\Games\progression;
+
 use function cli\line;
 
 function progressionAskAndGetCorrectAnswer()

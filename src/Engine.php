@@ -18,19 +18,19 @@ function startGame($gameName)
     switch ($gameName) {
         case "even":
             line('Answer "yes" if the number is even, otherwise answer "no".');
-        break;
+            break;
         case "calculator":
             line('What is the result of the expression?');
-        break;
+            break;
         case "gcd":
             line('Find the greatest common divisor of given numbers.');
-        break;
+            break;
         case "progression":
             line('What number is missing in the progression?');
-        break;
+            break;
         case "prime":
             line('Answer "yes" if given number is prime. Otherwise answer "no".');
-        break;
+            break;
     }
     $score = 0;
     while ($score != 3) {
@@ -38,23 +38,23 @@ function startGame($gameName)
         $answers = [];
         switch ($gameName) {
             case "even":
-            $correctAnswer = evenAskAndGetCorrectAnswer();
-            break;
+                $correctAnswer = evenAskAndGetCorrectAnswer();
+                break;
             case "calculator":
-            $correctAnswer = calculatorAskAndGetCorrectAnswer();
-            break;
+                $correctAnswer = calculatorAskAndGetCorrectAnswer();
+                break;
             case "gcd":
-            $correctAnswer = gcdAskAndGetCorrectAnswer();
-            break;
+                $correctAnswer = gcdAskAndGetCorrectAnswer();
+                break;
             case "progression":
-            $correctAnswer = progressionAskAndGetCorrectAnswer();
-            break;
+                $correctAnswer = progressionAskAndGetCorrectAnswer();
+                break;
             case "prime":
-            $correctAnswer = primeAskAndGetCorrectAnswer();
-            break;
+                $correctAnswer = primeAskAndGetCorrectAnswer();
+                break;
         }
         $userAnswer = prompt('Your answer');
-        if ($userAnswer === strval($correctAnswer) ) {
+        if ($userAnswer === strval($correctAnswer)) {
             $score++;
             line('Correct!');
         } else {

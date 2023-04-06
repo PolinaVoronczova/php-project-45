@@ -1,6 +1,9 @@
 <?php
+
 namespace BrainGames\Games\prime;
+
 use function cli\line;
+
 function primeAskAndGetCorrectAnswer()
 {
     $correctAnswer = 'yes';
@@ -10,6 +13,6 @@ function primeAskAndGetCorrectAnswer()
             $correctAnswer = 'no';
         }
     }
-    line('Question: '.$randomNum);
+    line('Question: ' . $randomNum);
     return $correctAnswer;
 }
