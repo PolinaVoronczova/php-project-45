@@ -5,7 +5,7 @@ function gcdAskAndGetCorrectAnswer()
 {
     $randNum1 = rand(1, 100);
     $randNum2 = rand(1, 100);
-    $gcdArray = [];
+    $gcdArray = [1];
     if ($randNum1 > $randNum2) {
         $gcdSearchNum1 = $randNum2;
         $gcdSearchNum2 = $randNum1;
