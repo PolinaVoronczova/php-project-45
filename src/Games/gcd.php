@@ -16,7 +16,7 @@ function gcdAskAndGetCorrectAnswer()
         $gcdSearchNum1 = $randNum1;
         $gcdSearchNum2 = $randNum2;
     }
-    for ($i = 1; $i < $gcdSearchNum1; $i++) {
+    for ($i = 1; $i <= $gcdSearchNum1; $i++) {
         if ($gcdSearchNum1 % $i === 0 && $gcdSearchNum2 % $i === 0) {
             $gcdArray[] = $i;
         }
