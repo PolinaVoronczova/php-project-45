@@ -58,7 +58,7 @@ function startGame($gameName)
             $score++;
             line('Correct!');
         } else {
-            line($userAnswer." is wrong answer ;(. Correct answer was " . $correctAnswer . ".");
+            line($userAnswer . " is wrong answer ;(. Correct answer was " . $correctAnswer . ".");
             $score = 0;
             break;
         }
