@@ -10,7 +10,7 @@ use function BrainGames\Games\gcd\gcdAskAndGetCorrectAnswer;
 use function BrainGames\Games\progression\progressionAskAndGetCorrectAnswer;
 use function BrainGames\Games\prime\primeAskAndGetCorrectAnswer;
 
-function startGame($gameName)
+function startGame(string $gameName)
 {
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
