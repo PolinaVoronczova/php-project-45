@@ -10,6 +10,7 @@ function progressionAskAndGetCorrectAnswer()
     $firstProgressionElement = rand(1, 20);
     $stepProgression = rand(1, 20);
     $hideElementIndex = rand(0, $lengthProgressionArray - 1);
+    $progressionArray = [];
     $progressionArray[] = $firstProgressionElement;
     for ($i = 1; $i != $lengthProgressionArray; $i++) {
         $progressionArray[] = $progressionArray[$i - 1] + $stepProgression;
