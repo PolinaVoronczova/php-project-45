@@ -16,16 +16,16 @@ function startGame($gameName)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
     switch ($gameName) {
-    case "even":
+        case "even":
             line('Answer "yes" if the number is even, otherwise answer "no".');
         break;
-    case "calculator":
+        case "calculator":
             line('What is the result of the expression?');
         break;
-    case "gcd":
+        case "gcd":
             line('Find the greatest common divisor of given numbers.');
         break;
-    case "progression":
+        case "progression":
             line('What number is missing in the progression?');
         break;
         case "prime":
@@ -37,19 +37,19 @@ function startGame($gameName)
         $correctAnswer = "";
         $answers = [];
         switch ($gameName) {
-        case "even":
+            case "even":
             $correctAnswer = evenAskAndGetCorrectAnswer();
             break;
-        case "calculator":
+            case "calculator":
             $correctAnswer = calculatorAskAndGetCorrectAnswer();
             break;
-        case "gcd":
+            case "gcd":
             $correctAnswer = gcdAskAndGetCorrectAnswer();
             break;
-        case "progression":
+            case "progression":
             $correctAnswer = progressionAskAndGetCorrectAnswer();
             break;
-        case "prime":
+            case "prime":
             $correctAnswer = primeAskAndGetCorrectAnswer();
             break;
         }
@@ -58,15 +58,15 @@ function startGame($gameName)
             $score++;
             line('Correct!');
         } else {
-            line($userAnswer." is wrong answer ;(. Correct answer was ".$correctAnswer.".");
+            line($userAnswer." is wrong answer ;(. Correct answer was " . $correctAnswer . ".");
             $score = 0;
             break;
         }
     }
     if ($score === 3) {
-        line('Congratulations, '.$name.'!');
+        line('Congratulations, ' . $name . '!');
     } else {
-        line("Let's try again, ".$name.'!');
+        line("Let's try again, " . $name . '!');
     }
     return;
 }
