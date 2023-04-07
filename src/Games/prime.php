@@ -13,6 +13,6 @@ function primeAskAndGetCorrectAnswer()
             $correctAnswer = 'no';
         }
     }
-    line("Question: " . (int)$randomNum);
+    line("Question: " . $randomNum);
     return $correctAnswer;
 }
