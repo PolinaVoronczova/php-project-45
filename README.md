@@ -16,12 +16,12 @@ Mind Games is a set of five console games built on the principle of popular mobi
     make install
 ## Demonstration
 #### Demonstration of a even console game
-(https://asciinema.org/a/BR2RGC1NaDFOF75FdZUoEVtnX)
+[![asciicast](https://asciinema.org/a/BR2RGC1NaDFOF75FdZUoEVtnX.svg)](https://asciinema.org/a/BR2RGC1NaDFOF75FdZUoEVtnX)
 #### Demonstration of a calculator console game
-(https://asciinema.org/a/jneZsXbGTVppB2uXqUXnQ4KpX)
+[![asciicast](https://asciinema.org/a/jneZsXbGTVppB2uXqUXnQ4KpX.svg)](https://asciinema.org/a/jneZsXbGTVppB2uXqUXnQ4KpX)
 #### Demonstration of a gcd console game
-(https://asciinema.org/a/en8Q237RnFiM0QcZIcj0jV9Td)
+[![asciicast](https://asciinema.org/a/en8Q237RnFiM0QcZIcj0jV9Td.svg)](https://asciinema.org/a/en8Q237RnFiM0QcZIcj0jV9Td)
 #### Demonstration of a progression console game
-(https://asciinema.org/a/dpwaf1hQgDbsWN7qiK5EsDgWo)
+[![asciicast](https://asciinema.org/a/dpwaf1hQgDbsWN7qiK5EsDgWo.svg)](https://asciinema.org/a/dpwaf1hQgDbsWN7qiK5EsDgWo)
 #### Demonstration of a prime console game
-(https://asciinema.org/a/nJIH28McThhA27ADeieWgVqPm)
+[![asciicast](https://asciinema.org/a/nJIH28McThhA27ADeieWgVqPm.svg)](https://asciinema.org/a/nJIH28McThhA27ADeieWgVqPm)
