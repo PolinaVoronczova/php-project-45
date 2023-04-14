@@ -2,17 +2,22 @@
 
 namespace BrainGames\Games\prime;
 
-use function cli\line;
+use function BrainGames\Engine\game;
 
-function primeAskAndGetCorrectAnswer()
+function startGamePrime()
 {
-    $correctAnswer = 'yes';
-    $randomNum = rand(1, 100);
-    for ($i = 2; $i !== $randomNum; $i++) {
-        if ($randomNum % $i === 0) {
-            $correctAnswer = 'no';
+    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $questions = [];
+    for ($i = 0; $i < 3; $i++) {
+        $correctAnswer = 'yes';
+        $randomNum = rand(1, 100);
+        for ($j = 2; $j !== $randomNum; $j++) {
+            if ($randomNum % $j === 0) {
+                $correctAnswer = 'no';
+            }
         }
+        $question = "Question: " . $randomNum;
+        $questions[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
-    line("Question: " . $randomNum);
-    return $correctAnswer;
+    game(['description' => $description, 'questions' => $questions]);
 }
