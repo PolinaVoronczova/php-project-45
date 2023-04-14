@@ -7,6 +7,7 @@ use function BrainGames\Engine\game;
 function startGameGcd()
 {
     $description = 'Find the greatest common divisor of given numbers.';
+    $questions = [];
     for ($i = 0; $i < 3; $i++) {
         $randNum1 = rand(1, 100);
         $randNum2 = rand(1, 100);
@@ -28,5 +29,4 @@ function startGameGcd()
         $questions[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
     game(['description' => $description, 'questions' => $questions]);
-    return $correctAnswer;
 }
