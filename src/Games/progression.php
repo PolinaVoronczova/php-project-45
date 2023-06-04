@@ -2,11 +2,11 @@
 
 namespace BrainGames\Games\progression;
 
-use function BrainGames\Engine\game;
+use function BrainGames\Engine\startGame;
 
+const DESCRIPTION_PROGRESSION_GAME = 'What number is missing in the progression?';
 function startGameProgression()
 {
-    $description = 'What number is missing in the progression?';
     $questions = [];
     for ($i = 0; $i < 3; $i++) {
         $lengthProgressionArray = rand(5, 10);
@@ -25,5 +25,5 @@ function startGameProgression()
         $question = "Question: {$progressionX}";
         $questions[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
-    game(['description' => $description, 'questions' => $questions]);
+    startGame(DESCRIPTION_PROGRESSION_GAMES, $questions);
 }

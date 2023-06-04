@@ -2,31 +2,33 @@
 
 namespace BrainGames\Games\calc;
 
-use function BrainGames\Engine\game;
+use function BrainGames\Engine\startGame;
+
+const DESCRIPTION_CALC_GAME = 'What is the result of the expression?';
 
 function startGameCalc()
 {
-    $description = 'What is the result of the expression?';
     $questions = [];
     for ($i = 0; $i < 3; $i++) {
         $randNum1 = rand(1, 100);
         $randNum2 = rand(1, 100);
-        $inkOrDec = rand(1, 3);
-        switch ($inkOrDec) {
-            case 1:
+        $operationArrray = ['+', '-', '*'];
+        $inkOrDec = rand(0, 2);
+        switch ($operationArrray[$inkOrDec]) {
+            case '+':
                 $question = "Question: {$randNum1} + {$randNum2}";
                 $correctAnswer =  $randNum1 + $randNum2;
                 break;
-            case 2:
+            case '-':
                 $question = "Question: {$randNum1} - {$randNum2}";
                 $correctAnswer =  $randNum1 - $randNum2;
                 break;
-            case 3:
+            case '*':
                 $question = "Question: {$randNum1} * {$randNum2}";
                 $correctAnswer =  $randNum1 * $randNum2;
                 break;
         }
         $questions[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
-    game(['description' => $description, 'questions' => $questions]);
+    startGame(DESCRIPTION_CALC_GAME, $questions);
 }

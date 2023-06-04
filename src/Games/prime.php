@@ -2,11 +2,12 @@
 
 namespace BrainGames\Games\prime;
 
-use function BrainGames\Engine\game;
+use function BrainGames\Engine\startGame;
+
+const DESCRIPTION_PRIME_GAME = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function startGamePrime()
 {
-    $description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $questions = [];
     for ($i = 0; $i < 3; $i++) {
         $correctAnswer = 'yes';
@@ -19,5 +20,5 @@ function startGamePrime()
         $question = "Question: " . $randomNum;
         $questions[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
-    game(['description' => $description, 'questions' => $questions]);
+    startGame(DESCRIPTION_PRIME_GAME, $questions);
 }
