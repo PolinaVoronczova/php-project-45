@@ -25,5 +25,5 @@ function startGameProgression()
         $question = "Question: {$progressionX}";
         $questions[] = ['question' => $question, 'correctAnswer' => $correctAnswer];
     }
-    startGame(DESCRIPTION_PROGRESSION_GAMES, $questions);
+    startGame(DESCRIPTION_PROGRESSION_GAME, $questions);
 }
