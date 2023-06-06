@@ -9,12 +9,12 @@ const DESCRIPTION_CALC_GAME = 'What is the result of the expression?';
 function startGameCalc()
 {
     $questions = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < COUNT_ROUNDS; $i++) {
         $randNum1 = rand(1, 100);
         $randNum2 = rand(1, 100);
         $operationArrray = ['+', '-', '*'];
-        $inkOrDec = rand(0, 2);
-        switch ($operationArrray[$inkOrDec]) {
+
+        switch ($operationArrray[array_rand($operationArrray, 1)]) {
             case '+':
                 $question = "Question: {$randNum1} + {$randNum2}";
                 $correctAnswer =  $randNum1 + $randNum2;

@@ -8,7 +8,7 @@ const DESCRIPTION_PROGRESSION_GAME = 'What number is missing in the progression?
 function startGameProgression()
 {
     $questions = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < COUNT_ROUNDS; $i++) {
         $lengthProgressionArray = rand(5, 10);
         $firstProgressionElement = rand(1, 20);
         $stepProgression = rand(1, 20);

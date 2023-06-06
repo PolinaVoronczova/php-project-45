@@ -9,7 +9,7 @@ const DESCRIPTION_PRIME_GAME = 'Answer "yes" if given number is prime. Otherwise
 function startGamePrime()
 {
     $questions = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < COUNT_ROUNDS; $i++) {
         $correctAnswer = 'yes';
         $randomNum = rand(1, 100);
         for ($j = 2; $j !== $randomNum; $j++) {

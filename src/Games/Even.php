@@ -9,7 +9,7 @@ const DESCRIPTION_EVEN_GAME = 'Answer "yes" if the number is even, otherwise ans
 function startGameEven()
 {
     $questions = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < COUNT_ROUNDS; $i++) {
         $randNum = rand(1, 100);
         $correctAnswer =  $randNum % 2 === 0 ? 'yes' : 'no';
         $question = 'Question: ' . $randNum;
